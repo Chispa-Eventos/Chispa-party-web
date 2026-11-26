@@ -1,0 +1,548 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Fondo base y configuración general */
+body {
+    background-color: #ffffff;  /* fondo base blanco */
+    color: #333;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Colores base */
+:root {
+    --rosa-principal: #ff4fa3;
+    --rosa-claro: #ffb6f2;
+    --azul-principal: #4fa3ff;
+}
+
+/* Encabezado y menú */
+header {
+    background: linear-gradient(90deg, var(--rosa-principal), var(--azul-principal));
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Imagen del logo en el header */
+.logo-img {
+    height: 48px;
+    width: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sección principal (hero) */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-claro), var(--azul-principal));
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.boton-principal {
+    display: inline-block;
+    background-color: white;
+    color: var(--rosa-principal);
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--azul-principal);
+}
+
+.boton-principal:hover {
+    background: linear-gradient(90deg, var(--rosa-claro), var(--azul-principal));
+    color: white;
+}
+
+/* Secciones generales */
+.seccion {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    margin-top: 30px;
+}
+
+.seccion h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--rosa-principal);
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Línea decorativa azul debajo de los títulos */
+.seccion h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--rosa-principal), var(--azul-principal));
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.texto-centro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Combos */
+.combos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.combo {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--azul-principal); /* acento azul */
+}
+
+.combo h3 {
+    margin-bottom: 10px;
+    color: var(--rosa-principal);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.combo ul {
+    margin-left: 18px;
+    margin-bottom: 10px;
+}
+
+.combo li {
+    margin-bottom: 5px;
+}
+
+.aclaracion {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Servicios (texto) */
+.servicios-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.servicio {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--azul-principal); /* acento azul */
+}
+
+.servicio h3 {
+    margin-bottom: 10px;
+    color: var(--rosa-principal);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Contacto */
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contacto label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.contacto input,
+.contacto textarea {
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccd9ff; /* borde azulado */
+    font-size: 0.95rem;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+    outline: none;
+    border-color: var(--azul-principal);
+    box-shadow: 0 0 0 2px rgba(79,163,255,0.2);
+}
+
+.contacto button {
+    width: 170px;
+    padding: 10px;
+    background: linear-gradient(90deg, var(--rosa-principal), var(--azul-principal));
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+}
+
+.contacto button:hover {
+    filter: brightness(1.05);
+}
+
+.datos-contacto {
+    text-align: center;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(90deg, var(--rosa-principal), var(--azul-principal));
+    color: white;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* CONTENEDOR PRINCIPAL: COLUMNA TEXTO + COLUMNA FOTOS (combos) */
+.layout-principal {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+/* Columna izquierda: contenido principal */
+.columna-contenido {
+    flex: 2;
+}
+
+/* Columna derecha: fotos laterales de combos */
+.columna-fotos {
+    flex: 1;
+    background-color: #f0f4ff; /* azul muy claro */
+    border-radius: 12px;
+    padding: 15px;
+    height: fit-content;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #d1e0ff;
+}
+
+.columna-fotos h3 {
+    text-align: center;
+    color: var(--azul-principal);
+    margin-bottom: 10px;
+}
+
+/* Fotos laterales de combos */
+.foto-lateral {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto 10px auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* SERVICIOS: TEXTO + FOTOS AL COSTADO (stand, maqui, pochos) */
+.seccion-servicios-con-fotos {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+/* Columna izquierda: texto de servicios */
+.servicios-texto {
+    flex: 2;
+}
+
+/* Columna derecha: fotos de servicios */
+.servicios-fotos {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* una debajo de la otra */
+    gap: 12px;
+}
+
+/* Fotos en la sección Servicios */
+.foto-servicio {
+    display: block;
+    width: 100%;
+    max-width: 360px;      /* grande pero controlado */
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* FONDO DECORATIVO ABAJO CON 4 IMÁGENES ESPACIADAS */
+body::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 45vh;              /* desde ~la mitad hacia abajo */
+    bottom: 0;
+    z-index: -1;            /* detrás de todo el contenido */
+    pointer-events: none;   /* no bloquea clics */
+
+    /* 4 imágenes de fondo */
+    background-image:
+        url("img/rosaf.png"),
+        url("img/azulf.png"),
+        url("img/sombrerof.png"),
+        url("img/confetif.png");
+
+    /* Posición de cada una: hacia los bordes */
+    background-position:
+        left 3% top 5%,        /* rosaf: arriba-izquierda de la zona baja */
+        right 3% top 15%,      /* azulf: arriba-derecha de la zona baja */
+        left 6% bottom 10%,    /* sombrerof: abajo-izquierda */
+        right 6% bottom 6%;    /* confetif: abajo-derecha */
+
+    /* No se repiten */
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat;
+
+    /* Tamaño de cada imagen */
+    background-size:
+        220px auto,   /* rosaf */
+        220px auto,   /* azulf */
+        220px auto,   /* sombrerof */
+        220px auto;   /* confetif */
+
+    opacity: 0.5;    /* visibles pero no exageradas */
+}
+
+/* PANEL LATERAL DE PRECIOS (DESLIZABLE A LA IZQUIERDA) */
+.precios-panel {
+    position: fixed;
+    top: 150px;               /* altura desde arriba, podés subir/bajar este valor */
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: stretch;
+    font-size: 0.95rem;
+}
+
+/* Pestaña vertical "PRECIOS" que siempre se ve */
+.precios-toggle {
+    background: linear-gradient(90deg, var(--rosa-principal), var(--azul-principal));
+    color: #fff;
+    padding: 10px 8px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    writing-mode: vertical-rl;   /* texto vertical */
+    text-orientation: mixed;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* Caja deslizable con los precios (oculta hacia la izquierda) */
+.precios-contenido {
+    background: linear-gradient(90deg, var(--rosa-principal), var(--azul-principal));
+    color: #fff;
+    padding: 15px 18px;
+    border-radius: 0 12px 12px 0;
+    min-width: 260px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    
+    /* estado cerrado: escondido fuera de la pantalla hacia la izquierda */
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* Cuando el mouse está sobre todo el panel, se abre */
+.precios-panel:hover .precios-contenido {
+    transform: translateX(0);   /* se desliza hacia adentro */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.precios-contenido h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.precios-contenido ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.precios-contenido li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    padding-bottom: 6px;
+}
+
+/* Nombre del ítem (combo) */
+.nombre-item {
+    font-weight: 500;
+}
+
+/* Precio: que resalte más */
+.precio-item {
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #ffffcc; /* amarillito para que destaque sobre el degradé */
+}
+
+/* Nota pequeña debajo */
+.nota-precios {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* Responsivo (para celulares y tablets) */
+@media (max-width: 900px) {
+    .layout-principal {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .columna-fotos {
+        max-width: 100%;
+    }
+
+    .seccion-servicios-con-fotos {
+        flex-direction: column;  /* texto arriba, fotos abajo */
+    }
+
+    .servicios-fotos {
+        align-items: center;     /* centra las 3 fotos */
+    }
+
+    /* Panel de precios más chico y abajo a la izquierda en móvil */
+    .precios-panel {
+        top: auto;
+        bottom: 20px;
+        left: 10px;
+        transform: scale(0.9);
+    }
+
+    .precios-contenido {
+        min-width: 230px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+    
+    .combo, .servicio {
+        width: 100%;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 0.85rem;
+    }
+}
+
+
+
+
+/* Responsivo (para celulares y tablets) */
+@media (max-width: 900px) {
+    .layout-principal {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .columna-fotos {
+        max-width: 100%;
+    }
+
+    .seccion-servicios-con-fotos {
+        flex-direction: column;  /* texto arriba, fotos abajo */
+    }
+
+    .servicios-fotos {
+        align-items: center;     /* centra las 3 fotos */
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+    
+    .combo, .servicio {
+        width: 100%;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 0.85rem;
+    }
+}
